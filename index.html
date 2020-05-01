@@ -10,14 +10,23 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="zoo/controller/zoo_main.js"></script>
+    <script src="zoo/controller/zoo_detail.js"></script>
+    <script src="zoo/controller/pen_detail.js"></script>
+    <script src="zoo/controller/animal_detail.js"></script>
+    <script src="zoo/controller/add_zoo.js"></script>
+    <script src="zoo/controller/add_pen.js"></script>
+    <script src="zoo/controller/add_animal.js"></script>
+
+    <script src="app.constants.js"></script>
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
   </head>
   <body>
-    Hello
+  <h1>Zoo Application</h1>
     <div class="view-container">
-      <div ng-view class="view-frame"></div>
+      <div ui-view class="view-frame"></div>
     </div>
 
   </body>
