@@ -1,6 +1,6 @@
 <button ng-click="addZooClicked()">Add Zoo</button>
 <ul>
-	<li ng-repeat= "country in data" ng-click="zooClicked($event, country)"> {{country}}
+	<li ng-repeat= "d in data" ng-click="zooClicked($event, d)"> {{d.zooName}}
 	</li>
 </ul>
 

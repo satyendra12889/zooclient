@@ -3,7 +3,7 @@
 <div> Pens</div>
 <button ng-click ="addPen($event)"> Add Pen </button>
 <ul> 
-<li ng-repeat = "pen in pens" ng-click=penClicked($event)> {{pen.name}}  
+<li ng-repeat = "pen in pens" ng-click=penClicked($event, pen)> {{pen.pegName}}  
 <div> {{pen.available}}</div>
 </li>
 </ul>
@@ -13,6 +13,6 @@
 <button ng-click ="addAnimal($event)">Add Animal</button>
 <ul>
 	<li ng-repeat ="anim in animals" ng-click=animalClicked($event)>
-		{{anim.name}} <div > {{anim.pen.name}}</div>
+		{{anim.animalName}} <div > {{anim.pen.name}}</div>
 	</li>
 </ul>

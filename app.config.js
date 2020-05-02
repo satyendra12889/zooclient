@@ -27,7 +27,7 @@ app.
             controller: 'ZooController'
         })
       .state('zoodetail', {
-            url: '/zoo',
+            url: '/zoo/:zooId',
             templateUrl: 'zoo/template/zoo_detail.html',
             controller: 'ZooDetailController'
             // we'll get to this in a bit       
@@ -39,25 +39,25 @@ app.
             // we'll get to this in a bit       
         })
       .state('addanimal', {
-            url: '/animal/add',
+            url: '/animal/addanimal',
             templateUrl: 'zoo/template/add_animal.html',
             controller: 'AddAnimalController'
             // we'll get to this in a bit       
         })
       .state('addpen', {
-            url: '/pen/add',
+            url: '/pen/addpen',
             templateUrl: 'zoo/template/add_pen.html',
             controller: 'AddPegController'
             // we'll get to this in a bit       
         })
       .state('pendetail', {
-            url: '/pen/detail',
+            url: '/pen/detail/:penId',
             templateUrl: 'zoo/template/pen_detail.html',
             controller: 'PegDetailController'
             // we'll get to this in a bit       
         })
       .state('addzoo', {
-            url: '/zoo/add',
+            url: '/addzoo',
             templateUrl: 'zoo/template/add_zoo.html',
             controller: 'AddZooController'
             // we'll get to this in a bit       
