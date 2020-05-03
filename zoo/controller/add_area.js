@@ -1,17 +1,18 @@
-var AddZooController = function($scope, $http, $state) {
+var AddAreaController = function($scope, $http, $state) {
   	// get all zoo 
 
-   $scope.addZoo = function($event){
+   $scope.addArea = function($event){
    		// http call  then back to zoo detail
 
    		 $http({
   method: 'POST',
-  url: 'http://localhost:8081/zoo-management/zoo/add',
-  data:{'name':$scope.zooName}
+  url: 'http://localhost:8081/zoo-management/area/add',
+  data:{'name':$scope.areaName,
+		'qty':$scope.qty}
 }).then(function successCallback(response) {
     
     $state.go('main', {});
-     console.log(response);
+     
   }, function errorCallback(response) {
     
     console.log(response);
@@ -26,5 +27,5 @@ var AddZooController = function($scope, $http, $state) {
 
 
 
-AddZooController.$inject = ['$scope', '$http', '$state'];
+AddAreaController.$inject = ['$scope', '$http', '$state'];
  

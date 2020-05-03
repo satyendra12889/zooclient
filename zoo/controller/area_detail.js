@@ -1,4 +1,4 @@
-var ZooDetailController = function($scope, $http, $state, $stateParams){
+var AreaDetailController = function($scope, $http, $state, $stateParams){
    
    $scope.animals = [{'name':"n1"}, {'name':"n2"}];
    $scope.pens = [{'name':"n1", 'animal':{'name':"name1"}}, {'name':"n2", 'animal':{'name':"n"}}];
@@ -7,14 +7,14 @@ var ZooDetailController = function($scope, $http, $state, $stateParams){
 
 
 
-   if($state.params.zooId!=null){
+   if($state.params.areaId!=null){
 
    	$http({
   method: 'GET',
-  url: 'http://localhost:8081/zoo-management/zoo/'+$stateParams.zooId,
+  url: 'http://localhost:8081/zoo-management/area/'+$stateParams.areaId,
 }).then(function successCallback(response) {
     $scope.animals = response.data.allAnimal;
-    $scope.name = response.data.zooName;
+    $scope.name = response.data.areaName;
     $scope.pens = response.data.allPens;
      console.log(response);
   }, function errorCallback(response) {
@@ -39,4 +39,4 @@ var ZooDetailController = function($scope, $http, $state, $stateParams){
    
 };
 
-ZooDetailController.$inject = ['$scope', '$http','$state', '$stateParams'];
+AreaDetailController.$inject = ['$scope', '$http','$state', '$stateParams'];

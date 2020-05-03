@@ -6,12 +6,12 @@ var app = angular.module('zooApp');
 app.constant("constant", config);
 
 app.controller('ZooController', ZooController);
-app.controller('ZooDetailController', ZooDetailController);
+app.controller('AreaDetailController', AreaDetailController);
 app.controller('AddAnimalController', AddAnimalController);
-app.controller('AddPegController', AddPegController);
-app.controller('AddZooController', AddZooController);
+app.controller('AddPenController', AddPenController);
+app.controller('AddAreaController', AddAreaController);
 app.controller('AnimalDetailController', AnimalDetailController);
-app.controller('PegDetailController', PegDetailController);
+app.controller('PenDetailController', PenDetailController);
 
 
 app.
@@ -26,10 +26,10 @@ app.
             templateUrl: 'zoo/template/main.html',
             controller: 'ZooController'
         })
-      .state('zoodetail', {
-            url: '/zoo/:zooId',
-            templateUrl: 'zoo/template/zoo_detail.html',
-            controller: 'ZooDetailController'
+      .state('areadetail', {
+            url: '/area/:areaId',
+            templateUrl: 'zoo/template/area_detail.html',
+            controller: 'AreaDetailController'
             // we'll get to this in a bit       
         })
       .state('animaldetail', {
@@ -47,19 +47,25 @@ app.
       .state('addpen', {
             url: '/pen/addpen',
             templateUrl: 'zoo/template/add_pen.html',
-            controller: 'AddPegController'
+            controller: 'AddPenController'
             // we'll get to this in a bit       
         })
       .state('pendetail', {
             url: '/pen/detail/:penId',
             templateUrl: 'zoo/template/pen_detail.html',
-            controller: 'PegDetailController'
+            controller: 'PenDetailController'
             // we'll get to this in a bit       
         })
-      .state('addzoo', {
-            url: '/addzoo',
-            templateUrl: 'zoo/template/add_zoo.html',
-            controller: 'AddZooController'
+      .state('addarea', {
+            url: '/addarea',
+            templateUrl: 'zoo/template/add_area.html',
+            controller: 'AddAreaController'
+            // we'll get to this in a bit       
+        })
+      .state('editanimal', {
+            url: '/editanimal',
+            templateUrl: 'zoo/template/edit_animal.html',
+            controller: 'AddAreaController'
             // we'll get to this in a bit       
         });
 

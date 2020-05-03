@@ -12,8 +12,6 @@ var AnimalDetailController = function($scope, $http, $state) {
    $scope.addAnimal = function($event, data){
    	$state.go('listzoo', {param1: data});
    }
-
-   
 };
 
 AnimalDetailController.$inject = ['$scope', '$http','$state'];

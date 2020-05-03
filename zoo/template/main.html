@@ -1,6 +1,29 @@
-<button ng-click="addZooClicked()">Add Zoo</button>
+<div class="row">
+<div class="col-sm-6">
+	<ul>
+	<button ng-click="addAreaClicked()">Add Area</button>
+	<div><h3>Area</h3></div>
+	<li ng-repeat= "d in areas" ng-click="areaClicked($event, d)"> {{d.areaName}}
+	</li>
+</ul></div>
+<div class="col-sm-6">
+<button ng-click="addAnimalClicked()">Add Animal</button>
+<div class="column">
+<div><h3>Stock</h3></div>
+<div>Filter  </div>
+<div class ="column">Animal Type <select ng-model="selectAnimalType" ng-options="x.name for x in animalType"></select>
+Area
+<select ng-model="selectedArea" ng-options="x for x in areas"></select>
+Pens
+<select ng-model="selectedArea" ng-options="x for x in areas"></select></div>
+<div>	
 <ul>
-	<li ng-repeat= "d in data" ng-click="zooClicked($event, d)"> {{d.zooName}}
+	<li ng-repeat= "d in animal| filter : {type:$scope.selectAnimalType}" ng-click="animalClicked($event, d)"> {{d.animalName}}   count : {{d.stocks!=null?d.stocks.size():0}}
 	</li>
 </ul>
+Total Animal count: <div>{{animalCount}}</div> 
+</div>
+</div>
+</div>
+</div>
 

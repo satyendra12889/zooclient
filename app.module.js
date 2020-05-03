@@ -1,6 +1,8 @@
 'use strict';
 
 // Define the `phonecatApp` module
-angular.module('zooApp', [
+var app = angular.module('zooApp', [
   'ui.router' 
 ]);
+
+

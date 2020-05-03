@@ -1,11 +1,18 @@
-Name : <input  ng-model="animalName"></input>
-
+<div>
+	<div>Name : <input  ng-model="animalName"></input>
+</div><br/>
+<div>
+Animal <select ng-model="selectedtype" ng-options="x for x in animalType"></select>
+</div>
+<div>
+<div>	
+Area<select ng-model="selectedArea" ng-options="x for x in areas"></select> pen 
+<select ng-model="selectedpen" ng-options="x for x in pen">
+</select>
+</div>
+</div>
+</div>
 <button ng-click = "submit()">submit</button>
 
 <button ng-click = "back()">back</button>
-
-<br/>
-<select ng-model="selectedtype" ng-options="x for x in animalType">
-</select>
-<select ng-model="selectedpeg" ng-options="x for x in pegs">
-</select>
+</div>

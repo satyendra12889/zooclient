@@ -1,4 +1,4 @@
-var PegDetailController = function($scope, $http, $state) {
+var PenDetailController = function($scope, $http, $state) {
    
    $scope.animals = [{'name':"n1"}, {'name':"n2"}];
    $scope.pens = [{'name':"n1", 'animal':{'name':"name1"}}, {'name':"n2", 'animal':{'name':"n"}}];
@@ -9,7 +9,7 @@ var PegDetailController = function($scope, $http, $state) {
 
       $http({
   method: 'GET',
-  url: 'http://localhost:8081/zoo-management/zoo/'+$stateParams.zooId,
+  url: 'http://localhost:8081/zoo-management/pen/'+$stateParams.zooId,
 }).then(function successCallback(response) {
     $scope.animals = response.data.allAnimals;
     $scope.name = response.data.zooName;
@@ -34,4 +34,4 @@ var PegDetailController = function($scope, $http, $state) {
    }
 };
 
-PegDetailController.$inject = ['$scope', '$http','$state'];
+PenDetailController.$inject = ['$scope', '$http','$state'];

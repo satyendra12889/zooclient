@@ -1,4 +1,4 @@
-var AddPegController = function($scope, $http, $state) {
+var AddPenController = function($scope, $http, $state) {
    
    $scope.data = ["hh", "h1"];
    $scope.temp = "hh";
@@ -20,4 +20,4 @@ var AddPegController = function($scope, $http, $state) {
 
 
 
-AddPegController.$inject = ['$scope', '$http', "$state"];
+AddPenController.$inject = ['$scope', '$http', "$state"];

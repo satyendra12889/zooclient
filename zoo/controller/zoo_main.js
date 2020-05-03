@@ -1,7 +1,7 @@
 var ZooController = function($scope, $http, $state) {
    
-   $scope.data = ["hh", "h1"];
-   $scope.temp = "hh";
+   $scope.areas = [];
+   $scope.stock = [];
 
 
 
@@ -9,10 +9,11 @@ var ZooController = function($scope, $http, $state) {
 
    $http({
   method: 'GET',
-  url: 'http://localhost:8081/zoo-management/zoo'
+  url: 'http://localhost:8081/zoo-management/dashboard'
 }).then(function successCallback(response) {
-    $scope.data = response.data;
      console.log(response);
+    $scope.areas = response.data.allArea;
+    $scope.animal = response.data.animal;
   }, function errorCallback(response) {
     console.log(response);
     // called asynchronously if an error occurs
@@ -20,13 +21,33 @@ var ZooController = function($scope, $http, $state) {
   });
 
 
+ $http({
+  method: 'GET',
+  url: "http://localhost:8081/zoo-management/type/list"
+}).then(function successCallback(response) {
+     console.log(response);
+    $scope.animalType = response.data;
+  }, function errorCallback(response) {
+    console.log(response);
+    
+    });
 
-   $scope.zooClicked = function($event, data){
-   	$state.go('zoodetail', {zooId: data.zooId});
+
+
+   $scope.areaClicked = function($event, data){
+   	$state.go('areadetail', {areaId: data.areaId});
    }
 
-   $scope.addZooClicked = function(){
-   	$state.go('addzoo', {});
+   $scope.animalClicked = function($event, data){
+   	$state.go('animaldetail', {animalId: data.animalId});
+   }
+
+   $scope.addAnimalClicked = function(){
+   	$state.go('addanimal', {});
+   }
+
+   $scope.addAreaClicked = function(){
+   	$state.go('addarea', {});
    }
 };
 
