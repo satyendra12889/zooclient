@@ -12,6 +12,7 @@ app.controller('AddPenController', AddPenController);
 app.controller('AddAreaController', AddAreaController);
 app.controller('AnimalDetailController', AnimalDetailController);
 app.controller('PenDetailController', PenDetailController);
+app.controller('AddLocationController', AddLocationController);
 
 
 app.
@@ -33,7 +34,7 @@ app.
             // we'll get to this in a bit       
         })
       .state('animaldetail', {
-            url: '/animal/detail',
+            url: '/animal/detail/:animalId',
             templateUrl: 'zoo/template/animal_detail.html',
             controller: 'AnimalDetailController'
             // we'll get to this in a bit       
@@ -62,10 +63,10 @@ app.
             controller: 'AddAreaController'
             // we'll get to this in a bit       
         })
-      .state('editanimal', {
-            url: '/editanimal',
-            templateUrl: 'zoo/template/edit_animal.html',
-            controller: 'AddAreaController'
+      .state('addLocation', {
+            url: '/addLocation/:stockId',
+            templateUrl: 'zoo/template/add_location.html',
+            controller: 'AddLocationController'
             // we'll get to this in a bit       
         });
 

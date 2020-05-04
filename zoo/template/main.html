@@ -15,7 +15,7 @@
 Area
 <select ng-model="selectedArea" ng-options="x for x in areas"></select>
 Pens
-<select ng-model="selectedArea" ng-options="x for x in areas"></select></div>
+<select ng-model="selectedPen" ng-options="x for x in pen"></select></div>
 <div>	
 <ul>
 	<li ng-repeat= "d in animal| filter : {type:$scope.selectAnimalType}" ng-click="animalClicked($event, d)"> {{d.animalName}}   count : {{d.stocks!=null?d.stocks.length:0}}

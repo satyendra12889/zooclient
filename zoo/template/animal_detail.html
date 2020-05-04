@@ -1,5 +1,16 @@
-<button ng-click ="backClicked()"></button>
-<div >{{name}} </div>
-<div > {{type}}</div>
-<div >{{qty}} </div>
+<button ng-click ="backClicked()">back</button>
+<div > Animal Name: {{name}} </div>
+<div > Animal Type: {{type}}</div>
+
+<ul>
+	<li ng-repeat="x in stock" > <div> Stock Name: {{x.stockName}}</div>
+		<div ng-show="x.penResponse!=null?true:false">
+		<div>Pen Name: {{x.penResponse.pegName}}   </div><div>Area : {{x.penResponse.area.areaName}}</div></div>
+		<div ng-show="x.penResponse==null?true:false">
+			<button ng-click="editClicked($event,x)"> add Location</button>
+		</div>
+	</li>
+
+</ul>
+
 
