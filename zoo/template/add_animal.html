@@ -2,17 +2,23 @@
 	<div>Name : <input  ng-model="animalName"></input>
 </div><br/>
 <div>
-Animal <select ng-model="selectedtype" ng-options="x for x in animalType"></select>
+Animal <select ng-model="selectedAnimal" >
+	<option ng-repeat="x in animal" ng-value="{{x}}">{{x.animalName}}</option>
+</select>
 </div>
 <div>
 <div>	
-Area<select ng-model="selectedArea" ng-options="x for x in areas"></select> pen 
-<select ng-model="selectedpen" ng-options="x for x in pen">
+Area<select ng-model="selectedArea"  ng-change="changesArea($event, x)" >
+	<option ng-repeat=" x in areas"  ng-value="{{x}}">{{x.areaName}}</option>
+</select> pen 
+<select ng-model="selectedpen" >
+	<option ng-repeat="x in pen" ng-value="{{x}}">{{x.pegName}}</option>
 </select>
 </div>
 </div>
+
 </div>
-<button ng-click = "submit()">submit</button>
+<button ng-click = "addAnimal()">submit</button>
 
 <button ng-click = "back()">back</button>
 </div>
