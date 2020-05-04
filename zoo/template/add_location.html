@@ -1,0 +1,9 @@
+<div>	
+Area<select ng-model="selectedArea"  ng-change="changesArea($event, x)" >
+	<option ng-repeat=" x in areas"  ng-value="{{x}}">{{x.areaName}}</option>
+</select> pen 
+<select ng-model="selectedpen" >
+	<option ng-repeat="x in pen" ng-value="{{x}}">{{x.pegName}}</option>
+</select>
+</div>
+<button ng-click="addLocation()">Add Location</button>
