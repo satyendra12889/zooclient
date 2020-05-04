@@ -10,18 +10,22 @@
 <button ng-click="addAnimalClicked()">Add Animal</button>
 <div class="column">
 <div><h3>Stock</h3></div>
-<div>Filter  </div>
-<div class ="column">Animal Type <select ng-model="selectAnimalType" ng-options="x.name for x in animalType"></select>
-Area
-<select ng-model="selectedArea" ng-options="x for x in areas"></select>
-Pens
-<select ng-model="selectedPen" ng-options="x for x in pen"></select></div>
+<div>Filter  </div> <button ng-click="reset()"> reset</button>
+<div class ="column">Animal Type<select ng-model="selectedAnimal" ng-change="animalTypeClicked($event, x)" >
+	<option ng-repeat="x in animalType" ng-value="{{x}}">{{x.name}}</option>
+</select>
+Area<select ng-model="selectedArea"  ng-change="changesArea($event, x)" >
+	<option ng-repeat=" x in areas"  ng-value="{{x}}">{{x.areaName}}</option>
+</select>
+<select ng-model="selectedpen" ng-change="penClicked($event, x)" >
+	<option ng-repeat="x in pen" ng-value="{{x}}">{{x.pegName}}</option>
+</select></div>
 <div>	
 <ul>
 	<li ng-repeat= "d in animal| filter : {type:$scope.selectAnimalType}" ng-click="animalClicked($event, d)"> {{d.animalName}}   count : {{d.stocks!=null?d.stocks.length:0}}
 	</li>
 </ul>
-Total Animal count: <div>{{animalCount}}</div> 
+ 
 </div>
 </div>
 </div>
