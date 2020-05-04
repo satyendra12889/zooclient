@@ -10,7 +10,7 @@ var AddAreaController = function($scope, $http, $state) {
   data:{'name':$scope.areaName,
 		'qty':$scope.qty}
 }).then(function successCallback(response) {
-    
+    alert(response.data.msg);
     $state.go('main', {});
      
   }, function errorCallback(response) {

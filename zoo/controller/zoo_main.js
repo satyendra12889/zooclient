@@ -23,7 +23,7 @@ var ZooController = function($scope, $http, $state) {
 
  $http({
   method: 'GET',
-  url: "http://localhost:8081/zoo-management/type/list"
+  url: "http://localhost:8081/zoo-management/animal/type/list"
 }).then(function successCallback(response) {
      console.log(response);
     $scope.animalType = response.data;

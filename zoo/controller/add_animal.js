@@ -46,6 +46,7 @@ $http({
   "penId": ($scope.selectedpen!=null?$scope.selectedpen.pegId:-1)
   }
 }).then(function successCallback(response) {
+    alert(response.data.msg);
     $state.go('main', {});
   }, function errorCallback(response) {
     console.log(response);
