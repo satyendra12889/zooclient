@@ -3,10 +3,7 @@ var ZooController = function($scope, $http, $state) {
    $scope.areas = [];
    $scope.stock = [];
    $scope.calledFromChange = false;
-
-
-
-   $scope.name = "hi";
+   $scope.name = "";
 
 
  $scope.getDashBoardData = function(){
