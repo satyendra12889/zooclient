@@ -1,8 +1,8 @@
 var AddLocationController = function($scope, $http, $state, $stateParams) {
    
-   $scope.data = ["hh", "h1"];
-   $scope.temp = "hh";
-   $scope.name = "hi";
+   $scope.data = {};
+   $scope.temp = "";
+   $scope.name = "";
 
    $scope.areas = [];
    $scope.pegs = [];
@@ -70,5 +70,5 @@ console.log(value);
 
 
 
-AddAnimalController.$inject = ['$scope', '$http','$state', '$stateParams'];
+AddLocationController.$inject = ['$scope', '$http','$state', '$stateParams'];
  

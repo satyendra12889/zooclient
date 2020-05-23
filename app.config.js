@@ -8,10 +8,8 @@ app.constant("constant", config);
 app.controller('ZooController', ZooController);
 app.controller('AreaDetailController', AreaDetailController);
 app.controller('AddAnimalController', AddAnimalController);
-app.controller('AddPenController', AddPenController);
 app.controller('AddAreaController', AddAreaController);
 app.controller('AnimalDetailController', AnimalDetailController);
-app.controller('PenDetailController', PenDetailController);
 app.controller('AddLocationController', AddLocationController);
 
 
@@ -43,18 +41,6 @@ app.
             url: '/animal/addanimal',
             templateUrl: 'zoo/template/add_animal.html',
             controller: 'AddAnimalController'
-            // we'll get to this in a bit       
-        })
-      .state('addpen', {
-            url: '/pen/addpen',
-            templateUrl: 'zoo/template/add_pen.html',
-            controller: 'AddPenController'
-            // we'll get to this in a bit       
-        })
-      .state('pendetail', {
-            url: '/pen/detail/:penId',
-            templateUrl: 'zoo/template/pen_detail.html',
-            controller: 'PenDetailController'
             // we'll get to this in a bit       
         })
       .state('addarea', {
